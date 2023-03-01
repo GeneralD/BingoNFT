@@ -118,7 +118,9 @@ contract BNGVer0 is
             tokenId.toString(),
             '", "description": "Bingo NFT is a full-on-chain BingoCard NFT.", "image": "data:image/svg+xml;base64,',
             bytes(svg).encode(),
-            '"}'
+            '", "matrix": ',
+            _matrixString(tokenId),
+            "}"
         );
         return string(abi.encodePacked("data:application/json;base64,", json.encode()));
     }
@@ -349,10 +351,10 @@ contract BNGVer0 is
     }
 
     ///////////////////////////////////////////////////////////////////
-    //// Logic
+    //// Matrix
     ///////////////////////////////////////////////////////////////////
 
-    function _numbers(uint256 tokenId) private pure returns (uint256[25] memory numbers) {
+    function matrix(uint256 tokenId) public pure returns (uint256[25] memory numbers) {
         uint256 k = uint256(keccak256(abi.encodePacked(tokenId)));
         for (uint256 i = 0; i < 25; i++) {
             if (i == 12) {
@@ -377,12 +379,20 @@ contract BNGVer0 is
         }
     }
 
+    function _matrixString(uint256 tokenId) private pure returns (string memory) {
+        bytes memory data = abi.encodePacked("[");
+        uint256[25] memory numbers = matrix(tokenId);
+        for (uint i = 0; i < 24; i++) data = abi.encodePacked(data, numbers[i].toString(), ", ");
+        data = abi.encodePacked(data, numbers[24].toString(), "]");
+        return string(data);
+    }
+
     ///////////////////////////////////////////////////////////////////
     //// SVG
     ///////////////////////////////////////////////////////////////////
 
     function _svg(uint256 tokenId) private pure returns (string memory result) {
-        uint256[25] memory numbers = _numbers(tokenId);
+        uint256[25] memory numbers = matrix(tokenId);
         bytes memory data;
         data = abi.encodePacked(
             '<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg width="100%" height="100%" viewBox="0 0 380 380" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="Capa-1" serif:id="Capa 1"><path d="M34.38,95.444l0,242.14c0,11.998 9.726,21.725 21.725,21.725l267.106,-0c11.998,-0 21.725,-9.727 21.725,-21.725l0,-260.927l0,-0l0,-33.562c0,-11.998 -9.727,-21.725 -21.725,-21.725l-267.106,-0c-11.998,-0 -21.725,9.727 -21.725,21.725l0,52.349l0,-0Zm305.125,-0l0,242.14c0,8.984 -7.31,16.294 -16.294,16.294l-267.106,-0c-8.985,-0 -16.294,-7.31 -16.294,-16.294l0,-242.14l299.694,-0Z" style="fill:#312782;fill-rule:nonzero;"/><text x="80.673px" y="81.948px" style="font-family:\'GillSans-BoldItalic\', \'Gill Sans\', sans-serif;font-weight:700;font-style:italic;font-size:64px;fill:#fff;">BINGO</text><path d="M189.658,208.153l4.806,10.9l11.842,-1.288l-7.036,9.612l7.036,9.612l-11.842,-1.288l-4.806,10.9l-4.806,-10.9l-11.842,1.288l7.036,-9.612l-7.036,-9.612l11.842,1.288l4.806,-10.9Z" style="fill:#312782;fill-rule:nonzero;"/>'

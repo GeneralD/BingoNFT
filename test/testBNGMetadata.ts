@@ -1,10 +1,12 @@
 import { expect, use } from 'chai'
+import chaiArrays from 'chai-arrays'
 import chaiString from 'chai-string'
 import { upgrades } from 'hardhat'
 import { describe } from 'mocha'
 
 import { LatestBNG, latestBNGFactory } from '../libraries/const'
 
+use(chaiArrays)
 use(chaiString)
 
 describe("Mint BNG as allowlisted member", () => {
@@ -23,8 +25,8 @@ describe("Mint BNG as allowlisted member", () => {
         expect(json.image).startsWith("data:image/svg+xml;base64,")
         const svg = atob(json.image.replace("data:image/svg+xml;base64,", ""))
 
-        console.log(svg)
+        expect(svg).startsWith('<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg')
 
-        // expect(svg).to.equals("tast")
+        expect(json.matrix).to.be.equalTo([4, 14, 9, 11, 10, 25, 20, 29, 22, 27, 43, 38, 0, 40, 45, 52, 54, 46, 56, 60, 68, 73, 74, 65, 64])
     })
 })
