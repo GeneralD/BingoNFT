@@ -1,0 +1,672 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0x58E6e3aaA9823010B501E84A440191d33b1Ae303",
+    "txHash": "0xcb152cd8b880028e82f6dce024565dd3f32fd31cf7c5aad1662330315b5344de"
+  },
+  "proxies": [
+    {
+      "address": "0xCa7081bbfD48F2C8D1085083dfb1Cb4beD6B534A",
+      "txHash": "0x9c31cf4061400702078afaa79b0b9775184ab989c5803b99add480489cad5214",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "cdad556761e291ff09772599237bb521c5daacc4bb3b849dd831ddc6b1156d1a": {
+      "address": "0x08391768833c2fA932941Fd905f9C0070bB9ca87",
+      "txHash": "0x9a0bb18be5ab5e9b605f4bad8723efd231587b01b2704478a687f661d430170d",
+      "layout": {
+        "solcVersion": "0.8.18",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "_royaltyFraction",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_uint96",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:116"
+          },
+          {
+            "label": "_royaltyReceiver",
+            "offset": 12,
+            "slot": "101",
+            "type": "t_address",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:121"
+          },
+          {
+            "label": "mintLimit",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_uint256",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:220"
+          },
+          {
+            "label": "publicPrice",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_uint256",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:243"
+          },
+          {
+            "label": "allowListPrice",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_uint256",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:251"
+          },
+          {
+            "label": "_merkleRoot",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_bytes32",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:264"
+          },
+          {
+            "label": "allowlistedMemberMintLimit",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_uint256",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:274"
+          },
+          {
+            "label": "isPublicMintPaused",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_bool",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:334"
+          },
+          {
+            "label": "isAllowlistMintPaused",
+            "offset": 1,
+            "slot": "107",
+            "type": "t_bool",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:355"
+          },
+          {
+            "label": "_withdrawalReceiver",
+            "offset": 2,
+            "slot": "107",
+            "type": "t_address",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:378"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          },
+          "t_uint96": {
+            "label": "uint96",
+            "numberOfBytes": "12"
+          }
+        }
+      }
+    },
+    "655e07f88eff552a23f50844225828281a987bcd13d1eef62bba29fb7992f5b4": {
+      "address": "0x743A2EbbB2380B68b2DDfc23326004a315E69f40",
+      "txHash": "0xec42f5770c9147c7345dcbdbb3a02f2708e3ca5b11ded8fe1dd76b27c28ffc1a",
+      "layout": {
+        "solcVersion": "0.8.18",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "_royaltyFraction",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_uint96",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:116"
+          },
+          {
+            "label": "_royaltyReceiver",
+            "offset": 12,
+            "slot": "101",
+            "type": "t_address",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:121"
+          },
+          {
+            "label": "mintLimit",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_uint256",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:220"
+          },
+          {
+            "label": "publicPrice",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_uint256",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:243"
+          },
+          {
+            "label": "allowListPrice",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_uint256",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:251"
+          },
+          {
+            "label": "_merkleRoot",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_bytes32",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:264"
+          },
+          {
+            "label": "allowlistedMemberMintLimit",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_uint256",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:274"
+          },
+          {
+            "label": "isPublicMintPaused",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_bool",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:334"
+          },
+          {
+            "label": "isAllowlistMintPaused",
+            "offset": 1,
+            "slot": "107",
+            "type": "t_bool",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:355"
+          },
+          {
+            "label": "_withdrawalReceiver",
+            "offset": 2,
+            "slot": "107",
+            "type": "t_address",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:376"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          },
+          "t_uint96": {
+            "label": "uint96",
+            "numberOfBytes": "12"
+          }
+        }
+      }
+    },
+    "f33a98caf5f5ac1a33353faaa3d8b1bdbf51421ef38132648b70eb0122371a1e": {
+      "address": "0xE5Cd57324404fF1423AE93a0AE4668EFd4b12F14",
+      "txHash": "0x133d27d466883c35008c93e68c6bf99a73fb7a2c055aa7b87582e55d4057cb45",
+      "layout": {
+        "solcVersion": "0.8.18",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "_royaltyFraction",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_uint96",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:116"
+          },
+          {
+            "label": "_royaltyReceiver",
+            "offset": 12,
+            "slot": "101",
+            "type": "t_address",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:121"
+          },
+          {
+            "label": "mintLimit",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_uint256",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:220"
+          },
+          {
+            "label": "publicPrice",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_uint256",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:243"
+          },
+          {
+            "label": "allowListPrice",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_uint256",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:251"
+          },
+          {
+            "label": "_merkleRoot",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_bytes32",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:264"
+          },
+          {
+            "label": "allowlistedMemberMintLimit",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_uint256",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:274"
+          },
+          {
+            "label": "isPublicMintPaused",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_bool",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:334"
+          },
+          {
+            "label": "isAllowlistMintPaused",
+            "offset": 1,
+            "slot": "107",
+            "type": "t_bool",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:355"
+          },
+          {
+            "label": "_withdrawalReceiver",
+            "offset": 2,
+            "slot": "107",
+            "type": "t_address",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:376"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          },
+          "t_uint96": {
+            "label": "uint96",
+            "numberOfBytes": "12"
+          }
+        }
+      }
+    },
+    "2f20a80401f66c53a682395eea0f8237010b8887421640878448f602ad038cf4": {
+      "address": "0x2E32C010Ce2e854Dcf1e19adE5152b69E1cc0aB1",
+      "txHash": "0x85e09e3dc0d4001643c3cfc1b605f770f45281e23bf573568d5aa0b8ba8d2706",
+      "layout": {
+        "solcVersion": "0.8.18",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "_royaltyFraction",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_uint96",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:116"
+          },
+          {
+            "label": "_royaltyReceiver",
+            "offset": 12,
+            "slot": "101",
+            "type": "t_address",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:121"
+          },
+          {
+            "label": "mintLimit",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_uint256",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:220"
+          },
+          {
+            "label": "publicPrice",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_uint256",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:243"
+          },
+          {
+            "label": "allowListPrice",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_uint256",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:251"
+          },
+          {
+            "label": "_merkleRoot",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_bytes32",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:264"
+          },
+          {
+            "label": "allowlistedMemberMintLimit",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_uint256",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:274"
+          },
+          {
+            "label": "isPublicMintPaused",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_bool",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:334"
+          },
+          {
+            "label": "isAllowlistMintPaused",
+            "offset": 1,
+            "slot": "107",
+            "type": "t_bool",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:355"
+          },
+          {
+            "label": "_withdrawalReceiver",
+            "offset": 2,
+            "slot": "107",
+            "type": "t_address",
+            "contract": "BNGVer0",
+            "src": "contracts/BNGVer0.sol:376"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          },
+          "t_uint96": {
+            "label": "uint96",
+            "numberOfBytes": "12"
+          }
+        }
+      }
+    }
+  }
+}
