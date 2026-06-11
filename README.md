@@ -1,5 +1,9 @@
 # Bng NFT powered by YUMENOSUKE
 
+![solidity](https://img.shields.io/badge/Solidity-0.8.18-363636) ![hardhat](https://img.shields.io/badge/Hardhat-2.x-fff100) ![erc721a](https://img.shields.io/badge/ERC721A-upgradeable-blue) ![typescript](https://img.shields.io/badge/TypeScript-4.x-3178c6) ![networks](https://img.shields.io/badge/networks-Ethereum%20%7C%20BSC-blue)
+
+![Bingo NFT — upgradeable ERC721A smart contract hero banner](assets/hero.jpg)
+
 Usage:
 
 This is a full-project template for [Cannon](https://github.com/GeneralD/cannon).
